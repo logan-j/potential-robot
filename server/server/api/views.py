@@ -4,5 +4,5 @@ from datetime import datetime
 def ping(request):
     return HttpResponse('pong')
 
-def get_timestamp(request, time_to_display=datetime.now()):
-    return JsonResponse({'currentTime': time_to_display.strftime('%Y-%m-%d %H:%M:%S')})
+def get_timestamp(request, timestamp_func=datetime.now):
+    return JsonResponse({'currentTime': timestamp_func().strftime('%Y-%m-%d %H:%M:%S')})
