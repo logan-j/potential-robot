@@ -10,6 +10,8 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
+                <p>This is a janky UTC clock that requires motivation to work</p>
+                <p>The more you hit it the more accurate it is</p>
                 <p>{this.state.time}</p>
                 <button onClick={() => {this.updateTime()}}>
                     Hit Me
@@ -22,15 +24,15 @@ class Clock extends React.Component {
         this.updateTime();
     }
 
-    updateTime() {
-        fetch('http://localhost:8000/api/timestamp')
+    async updateTime() {
+        await fetch('http://localhost:8000/api/timestamp')
             .then(response => response.json())
             .then(
                 (parsed) => {this.setState({
                         time: parsed.currentTime
                     })
                 },
-                (error) => {console.log(error)}
+                () => {}
             )
     }
 }
