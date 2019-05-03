@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/logan-j/potential-robot.png?branch=master)](https://travis-ci.org/logan-j/potential-robot)
+
 # Demo Project
 To successfully run this project will require that the server and client applications are both installed and running on the correct configured ports (the client expects the server application to be running on port 8000). Once both are running, navigate to http://localhost:3000/ to view the client application.
 

@@ -5,6 +5,7 @@ matrix:
       before_script:
         - cd server/server
       script:
+        - pip install -Ur requirements.txt
         - python ./manage.py test
 
     - language: node_js
