@@ -1,4 +1,5 @@
 import React from 'react';
+import './Clock.css';
 
 class Clock extends React.Component {
     constructor() {
@@ -12,7 +13,7 @@ class Clock extends React.Component {
             <div>
                 <p>This is a janky UTC clock that requires motivation to work</p>
                 <p>The more you hit it the more accurate it is</p>
-                <p>{this.state.time}</p>
+                <div className="clock">{this.state.time}</div>
                 <button onClick={() => {this.updateTime()}}>
                     Hit Me
                 </button>
