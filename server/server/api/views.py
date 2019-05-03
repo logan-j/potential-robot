@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 def ping(request):
     return HttpResponse('pong')
 
 def get_timestamp(request):
-    return HttpResponse('not_timestamp')
+    return JsonResponse({'currentTime': 'not-time-stamp'})
