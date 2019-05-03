@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('ping', views.ping)
+    path('ping', views.ping),
+    path('timestamp', views.get_timestamp)
 ]
