@@ -11,7 +11,7 @@ The client application requires that you have up to date versions of node (>8.10
 ### Install
 To install the client application, from the root/client directory run:
 ```
-yarn
+yarn install
 ```
 
 ### Run
